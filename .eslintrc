@@ -14,6 +14,7 @@
     "arrow-body-style": [0],
     "comma-spacing": [0],
     "no-unused-vars": [0],
-    "no-console": [0]
+    "no-console": [0],
+    "array-callback-return": [0]
   }
 }
