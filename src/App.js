@@ -6,20 +6,20 @@ import './styles/root.scss'
 
 const App = () => {
   const [board, setBoard] = useState(Array(9).fill(null))
-  const [isNext, setIsNext] = useState(false)
+  const [isXNext, setIsNext] = useState(false)
 
   const winner = calculateWinner(board)
 
   const message = winner
     ? `Winner is ${winner}`
-    : `Next player is ${isNext ? 'X' : 'O'}`
+    : `Next player is ${isXNext ? 'X' : 'O'}`
 
   const handleSquareClick = position => {
     if (board[position] || winner) return
     setBoard(prev => {
       return prev.map((square, pos) => {
         if (pos === position) {
-          return isNext ? 'X' : 'O'
+          return isXNext ? 'X' : 'O'
         }
         return square
       })
